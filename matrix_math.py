@@ -63,9 +63,9 @@ def matrix_col():
     pass
 
 
-def matrix_scalar_multiply():
-    pass
-
+def matrix_scalar_multiply(matrix, scalar):
+    return new_matrix = [[col * scalar for col in row] for row in matrix]
+    
 
 def matrix_vector_multiply():
     pass
