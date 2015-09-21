@@ -2,11 +2,18 @@ class ShapeException(Exception):
     pass
 
 
-def dot():
-    pass
+def dot(vector_a, vector_b):
+    output_vector = []
+    counter = -1
+    for x in vector_a:
+        counter += 1
+        addition_num = vector_b[counter]
+        new_num = x * addition_num
+        output_vector.append(new_num)
+    return sum(output_vector)
 
 
-def magnitude():
+def magnitude(vector):
     total = 0
     for x in vector:
         total += x**2
@@ -17,7 +24,7 @@ def shape():
     pass
 
 
-def vector_add():
+def vector_add(vector_a, vector_b):
     output_vector = []
     counter = -1
     for x in vector_a:
@@ -27,7 +34,7 @@ def vector_add():
         output_vector.append(new_num)
     return output_vector
 
-def vector_sub():
+def vector_sub(vector_a, vector_b):
     output_vector = []
     counter = -1
     for x in vector_a:
