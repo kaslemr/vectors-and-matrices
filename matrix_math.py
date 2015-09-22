@@ -20,8 +20,19 @@ def magnitude(vector):
     return total**0.5
 
 
-def shape():
-    pass
+def shape(matrix):
+    for row in matrix:
+        row_counter += 1
+        if type(row) == list:
+            for x in row:
+                column_counter += 1
+    column_counter = int(column_counter / row_counter)
+    size.append(row_counter)
+    size.append(column_counter)
+    if size[1] == 0:
+        del size[1]
+    size = tuple(size)
+    return size
 
 
 def vector_add(vector_a, vector_b):
@@ -65,10 +76,20 @@ def matrix_col():
 
 def matrix_scalar_multiply(matrix, scalar):
     return new_matrix = [[col * scalar for col in row] for row in matrix]
-    
 
-def matrix_vector_multiply():
-    pass
+
+def matrix_vector_multiply(matrix, vector):
+    output_matrix = []
+    for row in matrix:
+        output_row = []
+        counter = -1
+        for column in row:
+            counter += 1
+            calculated_value = column * vector_a[counter]
+            output_row.append(calculated_value)
+        output_row = sum(output_row)
+        output_matrix.append(output_row)
+    return output_matrix
 
 
 def matrix_matrix_multiply():
