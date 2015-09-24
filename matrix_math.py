@@ -21,6 +21,9 @@ def magnitude(vector):
     return total**0.5
 
 def shape(matrix):
+    row_counter = 0
+    column_counter = 0
+    size = []
     for row in matrix:
         row_counter += 1
         if type(row) == list:
